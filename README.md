@@ -17,7 +17,7 @@ Antes de arrancar, asegurate de tener instaladas las siguientes herramientas en 
 
 1. Cloná este repositorio:
 
-   git clone https://github.com/TU_USUARIO/riego-web.git
+   git clone https://github.com/DenisGenero/riego-iot.git
    cd riego-web
 
 2. Ejecutá el script de instalación:
@@ -26,6 +26,7 @@ Antes de arrancar, asegurate de tener instaladas las siguientes herramientas en 
 
    Esto va a:
    - Instalar las dependencias del backend
+   - Crear la base de datos e insertar unos datos de prueba
    - Instalar las dependencias del frontend (React)
 
 3. Luego simplemente:
