@@ -1,9 +1,18 @@
 const mqtt = require('mqtt');
 const db = require('./db');
+const fs = require('fs');
 
 const client_mqtt = mqtt.connect('mqtt://3.128.92.91:1883', {
-  username: 'denis',
-  password: 'denis346'
+  username: 'denis', // Conexión sin TLS
+  password: 'denis346',
+  // Conexión con TLS
+  host: '3.128.92.91', // IP elástica --> mosquitto en EC2
+  port: 8883,
+  protocol: 'mqtts',
+  rejectUnauthorized: false,
+  ca: fs.readFileSync('./certs/ca.crt'),
+  cert: fs.readFileSync('./certs/client.crt'),
+  key: fs.readFileSync('./certs/client.key'),
 });
 
 client_mqtt.on('connect', () => {
