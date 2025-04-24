@@ -45,7 +45,7 @@ Se desarrollaron **dos firmwares** para el ESP32, ambos basados en los ejemplos 
 1. **Firmware sin TLS (firmware_no_tls):**  
    Realiza la conexión al broker Mosquitto por el puerto **1883**, sin uso de certificados. Utilizado para pruebas iniciales.
 
-2. **Firmware con TLS firmware_tls:**  
+2. **Firmware con TLS (firmware_tls):**  
    Establece una conexión segura mediante **certificados TLS** (puerto 8883). Los certificados se generaron usando el script `crea_certs.sh`. Este firmware implementa **autenticación mutua**, asegurando la integridad y confidencialidad de las comunicaciones.
 
 Ambos firmwares permiten:
@@ -78,7 +78,7 @@ Hecho en **Node.js**, el backend se encarga de:
 | POST   | /devices                | Agrega un nuevo dispositivo                  |
 | DELETE | /devices/:device_id     | Elimina un dispositivo y su historial        |
 | GET    | /mediciones/:device_id  | Obtiene todas las mediciones del dispositivo |
-| POST   | /valvula/:device_id     | Cambia el estado de la válvula (ON/OFF)      |
+| POST   | /valvula/:device_id     | Cambia el estado de la válvula (OPEN/CLOSE)      |
 
 ## 👨‍💻 Autor
 
